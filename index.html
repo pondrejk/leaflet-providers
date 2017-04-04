@@ -19,20 +19,15 @@
 	<![endif]-->
 </head>
 <body>
-	<div class="github-fork-ribbon-wrapper left">
-		<div class="github-fork-ribbon">
-			<a href="https://github.com/leaflet-extras/leaflet-providers">Fork me on GitHub</a>
-		</div>
-	</div>
 	<div id="map" class="map"></div>
 
 	<script src="http://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
 	<script src="leaflet-providers.js"></script>
 	<script>
 		var map = L.map('map', {
-			center: [48, -3],
-			zoom: 5,
-			zoomControl: false
+			center: [49.1951, 16.6068],
+			zoom: 13,
+			zoomControl: true
 		});
 
 		var defaultLayer = L.tileLayer.provider('OpenStreetMap.Mapnik').addTo(map);
