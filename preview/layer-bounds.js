@@ -41,7 +41,7 @@ function addLayer (provider) {
 		container.innerHTML = '';
 		L.DomUtil.create('h2', '', container).innerHTML = provider;
 
-		map = L.map(L.DomUtil.create('div', 'map', container)).setView([52, 4], 6);
+		map = L.map(L.DomUtil.create('div', 'map', container)).setView([49.1951, 16.6068], 13);
 		map.addLayer(L.tileLayer.provider('Hydda.Base'));
 		map.addLayer(layer);
 

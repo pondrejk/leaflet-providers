@@ -3,7 +3,7 @@
 
 	var map = L.map('map', {
 		zoomControl: false,
-	}).setView([48, -3], 5);
+	}).setView([49.1951, 16.6068], 13);
 
 	function escapeHtml (string) {
 		return string
@@ -112,7 +112,10 @@
 
 	// add minimap control to the map
 	var layersControl = L.control.layers.minimap(baseLayers, overlays, {
-		collapsed: false
+		collapsed: false, 
+    options: {
+      position: 'topright'
+    },
 	}).addTo(map);
 
 	// Pass a filter in the hash tag to show only layers containing that string
@@ -179,10 +182,8 @@
 			var container = L.DomUtil.get('info');
 			L.DomEvent.disableClickPropagation(container);
 
-			L.DomUtil.create('h4', null, container).innerHTML = 'Provider names for <code>leaflet-providers.js</code>';
-			var providerNames = L.DomUtil.create('code', 'provider-names', container);
+			var providerNames = L.DomUtil.create('provider-names', container);
 
-			L.DomUtil.create('h4', '', container).innerHTML = 'Plain JavaScript:';
 			var pre = L.DomUtil.create('pre', null, container);
 			var code = L.DomUtil.create('code', 'javascript', pre);
 

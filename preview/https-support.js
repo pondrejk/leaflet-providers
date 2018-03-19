@@ -31,7 +31,7 @@ function addLayer (provider) {
 	}
 
 	L.DomEvent.on(result, 'click', function () {
-		var center = [52, 4];
+		var center = [49.1951, 16.6068];
 		if ('bounds' in options && options.bounds) {
 			center = L.latLngBounds(options.bounds).getCenter();
 		}
