@@ -112,10 +112,8 @@
 
 	// add minimap control to the map
 	var layersControl = L.control.layers.minimap(baseLayers, overlays, {
-		collapsed: false, 
-    options: {
-      position: 'topright'
-    },
+		collapsed: false,
+    position: 'topleft'
 	}).addTo(map);
 
 	// Pass a filter in the hash tag to show only layers containing that string
